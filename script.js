@@ -56,6 +56,7 @@ petForm.addEventListener("submit", function (event) {
 
   //creo la nuova istaanza di Pet
   const newPet = new Pet(petName.value, ownerName.value, species.value, breed.value);
+
   //aggiungo le nuove istanze all'array pets
   pets.push(newPet);
 
@@ -65,8 +66,10 @@ petForm.addEventListener("submit", function (event) {
   //creo l'elemento li e il testo all'interno sarà il contenuto della variabile creata in precedenza
   const li = document.createElement("li");
   li.textContent = liText;
+
   //appendo l'elemento li alla lista vuota precedentemente creata nell'index
   petList.appendChild(li);
+
   //resetto il form
   petForm.reset();
 
