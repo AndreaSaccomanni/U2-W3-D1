@@ -73,14 +73,17 @@ petForm.addEventListener("submit", function (event) {
   //resetto il form
   petForm.reset();
 
-  //compareOwner;
+  if (pets.length >= 2) {
+    compareOwner();
+  }
 });
 
 //funzione per comparare due padroni di due istanze diverse
-/*const compareOwner = function () {
+
+const compareOwner = function () {
   if (pets.length >= 2) {
     const pet1 = pets[0];
-    const pet2 = pets[1];
+    const pet2 = pets[2];
 
     const sameOwner = pet1.isTheSameOwner(pet2);
     console.log(sameOwner);
@@ -89,4 +92,3 @@ petForm.addEventListener("submit", function (event) {
     console.log("Devi inserire almeno un altro animale");
   }
 };
-*/
